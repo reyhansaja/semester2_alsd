@@ -30,6 +30,7 @@ public class tugas2 {
             default:
                 System.out.println("Pilihan tidak valid, silakan coba lagi.");
             }
+            break;
         }    
     }
     public static void volumeKubus(int panjang) {
