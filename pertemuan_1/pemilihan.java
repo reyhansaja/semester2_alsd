@@ -20,7 +20,7 @@ public class pemilihan {
         }
         System.out.println("===============================");
         System.out.println("===============================");
-        double nilaiAkhir = ((int)tugas * 0.1) + ((int)quiz * 0.2) + ((int) uts * 0.3 + (int) uas * 0.4);
+        double nilaiAkhir = ((int)tugas * 0.2) + ((int)quiz * 0.2) + ((int) uts * 0.3 + (int) uas * 0.3);
         if (nilaiAkhir <= 100 && nilaiAkhir > 80) {
             System.out.println("Nilai Akhir: " + nilaiAkhir);
             System.out.println("Nilai Huruf: A");
