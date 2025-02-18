@@ -4,6 +4,14 @@ public class MataKuliah23 {
     int sks;
     int jumlahJam;
 
+    public MataKuliah23(){
+    }
+    public MataKuliah23(String kodeMk, String nama, int sks, int jumlahJam){
+        this.kodeMk = kodeMk;
+        this.nama = nama;
+        this.sks = sks;
+        this.jumlahJam = jumlahJam;
+    }
 
     void tampilkanInformasi(){
         System.out.println("kode mata kuliah: "+kodeMk);
