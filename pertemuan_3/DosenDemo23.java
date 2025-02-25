@@ -20,7 +20,7 @@ public class DosenDemo23 {
             System.out.print("Jenis Kelamin (L/P): ");
             char jk = sc.next().charAt(0);
             sc.nextLine();
-            boolean jenisKelamin = (jk == 'L' || jk == 'l'); 
+            boolean jenisKelamin = (jk == 'L' || jk == 'l');
 
             System.out.print("Usia: ");
             int usia = Integer.parseInt(sc.nextLine());
@@ -28,9 +28,11 @@ public class DosenDemo23 {
             arrayDosen[i] = new Dosen23(kode, nama, jenisKelamin, usia);
         }
 
-        System.out.println("DATA DOSEN");
-        for (Dosen23 dosen : arrayDosen) {
-            dosen.cetakInfo();
-        }
+        DataDosen23.dataSemuaDosen(arrayDosen);
+        DataDosen23.jumlahDosenPerJenisKelamin(arrayDosen);
+        DataDosen23.rerataUsiaDosenPerJenisKelamin(arrayDosen);
+        DataDosen23.infoDosenPalingTua(arrayDosen);
+        DataDosen23.infoDosenPalingMuda(arrayDosen);
+
     }
 }
