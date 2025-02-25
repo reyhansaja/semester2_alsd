@@ -7,9 +7,9 @@ public class MatakuliahDemo23 {
         jumlahData = sc.nextInt();
         Matakuliah23[] arrayMatakuliah23 = new Matakuliah23[jumlahData];
 
-
         for (int i = 0; i < jumlahData; i++) {
             System.out.println("Masukkan data matakuliah ke- " + (i+1));
+            sc.nextLine();
             arrayMatakuliah23[i] = new Matakuliah23("","",0,0);
             arrayMatakuliah23[i].tambahData(sc);
         }
