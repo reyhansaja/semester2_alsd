@@ -12,10 +12,10 @@ public class MatakuliahDemo23 {
             kode = sc.nextLine();
             System.out.print("Nama: ");
             nama = sc.nextLine();
-            System.out.println("SKS: ");
+            System.out.print("SKS: ");
             dummy = sc.nextLine();
             sks = Integer.parseInt(dummy);
-            System.out.println("Jumlah jam: ");
+            System.out.print("Jumlah jam: ");
             dummy = sc.nextLine();
             jumlahJam = Integer.parseInt(dummy);
             System.out.println("----------------------");
