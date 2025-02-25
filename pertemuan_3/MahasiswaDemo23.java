@@ -20,11 +20,7 @@ public class MahasiswaDemo23 {
             System.out.println("------------------------------");
         }
         for (int i = 0; i < 3; i++) {
-            System.out.println("Nim: "+ arrayofMahasiswa23[i].nim);
-            System.out.println("Nama: "+ arrayofMahasiswa23[i].nama);
-            System.out.println("Kelas: "+ arrayofMahasiswa23[i].kelas);
-            System.out.println("IPK: "+arrayofMahasiswa23[i].ipk);
-            System.out.println("-----------------------------------");
+            arrayofMahasiswa23[i].cetakInfo();
         }
     }    
 }
