@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MainFaktorial {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("masukkan nilai: ");
+        System.out.print("masukkan nilai: ");
         int nilai = input.nextInt(); 
 
         Faktorial fk = new Faktorial();

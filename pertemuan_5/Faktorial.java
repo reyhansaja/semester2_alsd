@@ -1,7 +1,7 @@
 public class Faktorial {
     int FaktorialBF(int n){
         int fakto = 1;
-        for(int i=1; i<=1; i++){
+        for(int i=1; i<=n; i++){
             fakto = fakto * i;
         }
         return fakto;
