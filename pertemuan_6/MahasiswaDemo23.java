@@ -31,5 +31,9 @@ public class MahasiswaDemo23 {
         list.bubbleSort();
         list.tampil();
 
+        System.out.println("Data yang sudah terurut dengan SELECTION SORT: ");
+        list.selectionSort();
+        list.tampil();
+
     }
 }
