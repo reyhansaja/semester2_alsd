@@ -35,5 +35,9 @@ public class MahasiswaDemo23 {
         list.selectionSort();
         list.tampil();
 
+        System.out.println("Data yang sudah terurut dengan INSERTION SORT: ");
+        list.selectionSort();
+        list.tampil();
+
     }
 }
