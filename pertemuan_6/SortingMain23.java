@@ -7,5 +7,13 @@ public class SortingMain23 {
         dataurut1.bubleSort();
         System.out.println("Data Sudah diurutkan dengan BUBBLE SORT (ASC)");
         dataurut1.tampil();
+
+        int b[] = {30, 20, 2, 8, 14};
+        Sorting23 dataurut2 = new Sorting23(b, b.length);
+        System.out.println("Data Awal 2");
+        dataurut2.tampil();
+        dataurut2.selectionSort();
+        System.out.println("Data sudah diurutkan dengan SELECTION SORT (ASC)");
+        dataurut2.tampil();
     }
 }
