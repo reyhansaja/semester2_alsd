@@ -2,8 +2,8 @@ public class MahasiswaBerprestaasi23 {
     Mahasiswa23 [] listMhs;
     int idx;
 
-    MahasiswaBerprestaasi23() {
-        listMhs = new Mahasiswa23[5];
+    MahasiswaBerprestaasi23(int jumMhs) {
+        listMhs = new Mahasiswa23[jumMhs];
         idx = 0;
     }
     
