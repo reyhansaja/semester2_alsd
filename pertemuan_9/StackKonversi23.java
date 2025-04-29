@@ -5,10 +5,10 @@ public class StackKonversi23 {
     public StackKonversi23() { 
         this.size = 32; //asumsi 32 bit 
         tumpukanBiner = new int[size]; 
-        top=-1;
+        top = -1;
     }
     public boolean isEmpty() {
-        return top== -1;
+        return top == -1;
     }
 
     public boolean isFull() {
@@ -19,8 +19,8 @@ public class StackKonversi23 {
         if (isFull()) {
             System.out.println("Stack penuh");
         } else {
-            tumpukanBiner[top] = data;
             top++;
+            tumpukanBiner[top] = data;
         }
     }
     public int pop() {
