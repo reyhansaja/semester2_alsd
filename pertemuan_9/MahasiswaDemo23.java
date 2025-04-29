@@ -48,7 +48,7 @@ public class MahasiswaDemo23 {
                     stack.print();
                     break;
                 default:
-                    System.out.println("Pilihan tidak Valid")
+                    System.out.println("Pilihan tidak Valid");
             }
         } while (pilih >= 1 && pilih <= 4);
     }
