@@ -10,6 +10,6 @@ public class Mahasiswa {
         this.kelas = kelas;
     }
     public void tampilkanData(){
-        System.out.println(nim + " - " + prodi + " - " + kelas);
+        System.out.println(nim + " - "+ nama +" - " + prodi + " - " + kelas);
     }
 }
