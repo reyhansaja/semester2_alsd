@@ -133,4 +133,18 @@ public class SingleLinkedList23 {
             }
         }
     }
+    public void removeAt(int index){
+        if(index == 0){
+            removeFirst();
+        }else {
+            Node23 temp = head;
+            for(int i = 0; i < index - 1; i++){
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            if (temp.next == null) {
+                tail = temp;
+            }
+        }
+    }
 }
