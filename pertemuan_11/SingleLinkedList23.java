@@ -20,7 +20,7 @@ public class SingleLinkedList23 {
     }
     public void addFirst(Mahasiswa23 input){
         Node23 ndInput = new Node23(input, null);
-        if (!isEmpty()) {
+        if (isEmpty()) {
             head = ndInput;
             tail = ndInput;
         }else{
@@ -30,11 +30,11 @@ public class SingleLinkedList23 {
     }
     public void addLast(Mahasiswa23 input){
         Node23 ndInput = new Node23(input, null);
-        if (!isEmpty()) {
+        if (isEmpty()) {
             head = ndInput;
             tail = ndInput;
         }else{
-            ndInput.next = head;
+            tail.next = ndInput;
             tail = ndInput;
         }
     }
