@@ -4,6 +4,6 @@ public class Node23 {
 
     public Node23(Mahasiswa23 data, Node23 next) {
         this.data = data;
-        this.next = next
+        this.next = next;
     }
 }
