@@ -20,7 +20,7 @@ public class Main {
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = sc.nextInt();
-            sc.nextLine(); // consume newline
+            sc.nextLine();
 
             switch (pilihan) {
                 case 1:
