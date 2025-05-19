@@ -1,67 +1,17 @@
-import java.util.Scanner;
-
 public class SLLMain23 {
-    public static Mahasiswa23 inputMahasiswa(Scanner sc) {
-        System.out.print("NIM   : ");
-        String nim = sc.nextLine();
-        System.out.print("Nama  : ");
-        String nama = sc.nextLine();
-        System.out.print("Kelas : ");
-        String kelas = sc.nextLine();
-        System.out.print("IPK   : ");
-        double ipk = sc.nextDouble();
-        sc.nextLine();
-        return new Mahasiswa23(nim, nama, kelas, ipk);
-    }
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         SingleLinkedList23 sll = new SingleLinkedList23();
-        Mahasiswa23 mhs = new Mahasiswa23();
-        int pilihan;
-        do { 
-            System.out.println("== Menu Linked List ==");
-            System.out.println("1. Tambah data di awal");
-            System.out.println("2. Tambah data di akhir");
-            System.out.println("3. Tambah data setelah nama tertentu");
-            System.out.println("4. Tambah data pada index tertentu");
-            System.out.println("5. Tampilkan data");
-            System.out.println("0. Keluar");
-            System.out.print("Pilihan Menu: ");
-            pilihan = sc.nextInt();
-            sc.nextLine();
-
-            switch (pilihan) {
-                case 1:
-                    mhs = inputMahasiswa(sc);
-                    sll.addFirst(mhs);
-                    break;
-                case 2:
-                    mhs = inputMahasiswa(sc);
-                    sll.addLast(mhs);
-                    break;
-                case 3:
-                    System.out.print("Mau input setelah siapa?: ");
-                    String key = sc.nextLine();
-                    mhs = inputMahasiswa(sc);
-                    sll.insertAfter(key, mhs);
-                    break;
-                case 4:
-                    System.out.print("Masukkan Index: ");
-                    int index = sc.nextInt();
-                    sc.nextLine();
-                    mhs = inputMahasiswa(sc);
-                    sll.insertAt(index, mhs);
-                    break;
-                case 5:
-                    sll.print();
-                    break;
-                case 0:
-                    System.out.println("Keluar Program!");
-                    break;
-                default:
-                    System.out.println("Menu tidak valid");;
-            }
-        } while (pilihan != 0);
+        Mahasiswa23 mhs1 = new Mahasiswa23("24212200", "Alvaro", "1A", 4.0);
+        Mahasiswa23 mhs2 = new Mahasiswa23("23212201", "Bimon", "2B", 3.8);
+        Mahasiswa23 mhs3 = new Mahasiswa23("22212202", "Cintia","3C", 3.5);
+        Mahasiswa23 mhs4 = new Mahasiswa23("21212203", "Dirga", "4D", 3.6);
+        sll.print();
+        sll.addFirst(mhs4);
+        sll.print();
+        sll.addLast(mhs1);
+        sll.print();
+        sll.insertAfter("Dirga", mhs3);
+        sll.insertAt(2, mhs2);
+        sll.print();
     }
 }
