@@ -57,4 +57,23 @@ public class DoubleLinkedList {
         }
         size++;
     }
+    public int size(){
+        return size;
+    }
+    public void clear(){
+        head = null;
+        size = 0;
+    }
+    public void print(){
+        if(!isEmpty()){
+            Node tmp = head;
+            while (tmp != null){
+                System.out.print(tmp.data + "\t");
+                tmp = tmp.next;
+            }
+            System.out.println("\nberhasil diisi");
+        }else{
+            System.out.println("Linked list kosong");
+        }
+    }
 }
