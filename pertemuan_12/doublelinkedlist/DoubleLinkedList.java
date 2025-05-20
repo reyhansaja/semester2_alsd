@@ -26,7 +26,7 @@ public class DoubleLinkedList {
             while (current.next != null) {
                 current = current.next;
             }
-            Node newNode = new Node (current, item, head);
+            Node newNode = new Node (current, item, null);
             current.next = newNode;
             size++;
         }
