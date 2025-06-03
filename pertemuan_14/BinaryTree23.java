@@ -34,4 +34,131 @@ public class BinaryTree23 {
             }
         }
     }
+
+    boolean find(double ipk){
+        boolean result = false;
+        Node23 current = root;
+        while (current != null) {
+            if (current.mahasiswa.ipk == ipk) {
+                result = true;
+                break;
+            }else if(ipk > current.mahasiswa.ipk){
+                current = current.right;
+            }else{
+                current = current.left;
+            }
+        }
+        return result;
+    }
+    
+    void traversePreOrder(Node23 node){
+        if(node != null){
+            node.mahasiswa.tampilInformasi();
+            traversePreOrder(node.left);
+            traversePreOrder(node.right);
+        }
+    }
+
+    void traverseInOrder(Node23 node){
+        if (node != null) {
+            traverseInOrder(node.left);
+            node.mahasiswa.tampilInformasi();
+            traverseInOrder(node.right);
+        }
+    }
+
+    void traversePostOrder(Node23 node){
+        if (node != null){
+            traversePostOrder(node.left);
+            traversePostOrder(node.right);
+            node.mahasiswa.tampilInformasi();
+        }
+    }
+
+    Node23 getSuccessor(Node23 del){
+        Node23 successor = del.right;
+        Node23 successorParent = del;
+        while(successor.left != null){
+            successorParent = successor;
+            successor = successor.left;
+        }
+        if(successor != del.right){
+            successorParent.left = successor.right;
+            successor.right = del.right;
+        }
+        return successor;
+    }
+
+    void delete(double ipk){
+        if(isEmpty()){
+            System.out.println("Binary tree kosong");
+            return;
+        }
+        Node23 parent = root;
+        Node23 current = root;
+        boolean isLeftChild = false;
+        while (current != null) {
+            if(current.mahasiswa.ipk == ipk){
+                break;
+            }else if(ipk < current.mahasiswa.ipk){
+                parent = current;
+                current = current.left;
+                isLeftChild = true;
+            }else if(ipk > current.mahasiswa.ipk){
+                parent = current;
+                current = current.right;
+                isLeftChild = false;
+            }
+        }
+        if(current == null){
+            System.out.println("Data tidak ditemukan");
+            return;
+        }else{
+            if(current.left == null && current.right == null){
+                if(current == root){
+                    root = null;
+                }else{
+                    if(isLeftChild){
+                        parent.left = null;
+                    }else{
+                        parent.right = null;
+                    }
+                }
+            }else if(current.left == null){
+                if(current == root){
+                    root = current.right;
+                }else{
+                    if(isLeftChild){
+                        parent.left = current.right;
+                    }else{
+                        parent.right = current.right;
+                    }
+                }
+            }else if(current.right == null){
+                if(current == root){
+                    root = current.left;
+                }else{
+                    if (isLeftChild) {
+                        parent.left = current.left;
+                    }else{
+                        parent.right = current.right;
+                    }
+                }
+            }else{
+                Node23 successor = getSuccessor(current);
+                System.out.println("Jika 2 anak, current = ");
+                successor.mahasiswa.tampilInformasi();
+                if (current == root) {
+                    root = successor;
+                }else{
+                    if (isLeftChild) {
+                        parent.left = successor;
+                    }else{
+                        parent.right = successor;
+                    }
+                }
+                successor.left = current.left;
+            }
+        }
+    }
 }
